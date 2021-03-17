@@ -3,7 +3,7 @@
   --bg2: #bae2e1;
   --text1: #111;
   --text2: #111;
-  --grayAlpha: rgba(100,100,100,0.3);
+  --grayAlpha: rgba(100, 100, 100, 0.3);
   --gap: 4px;
   --pad: calc(var(--gap) * 4);
   --messageWidth: 28ch;
@@ -52,25 +52,39 @@
 }
 .izzyPhone .timestamp {
   margin: calc(var(--gap) * 2);
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   font-size: 0.9em;
   letter-spacing: 1px;
   line-height: 2;
-  opacity: 0.8;
+  opacity: 0.7;
+  text-align: center;
 }
 .izzyPhone .timestamp:first-of-type {
   margin-top: 0;
+}
+.izzyPhone .timestamp:after, .izzyPhone .timestamp:before {
+  content: "";
+  background: currentcolor;
+  height: 1px;
+  opacity: 0.5;
+  flex-grow: 1;
+}
+.izzyPhone .timestamp:after {
+  margin-left: 1ch;
+}
+.izzyPhone .timestamp:before {
+  margin-right: 1ch;
 }
 .izzyPhone .message {
   background-color: var(--bg);
   color: var(--text);
   display: block;
   box-sizing: border-box;
-  width: max-content;
   max-width: min(80%, var(--messageWidth));
   margin: var(--gap) 0;
   padding: var(--radius);
+  width: max-content;
 }
 .izzyPhone .to {
   --bg: var(--bg1);
@@ -90,6 +104,7 @@
   max-width: 100%;
   border-radius: calc(var(--radius) * 0.5);
 }
-.izzyPhone :not(.to) + .to, .izzyPhone :not(.from) + .from {
+.izzyPhone :not(.to) + .to,
+.izzyPhone :not(.from) + .from {
   margin-top: calc(var(--gap) * 2);
 }
