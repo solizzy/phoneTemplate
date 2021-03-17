@@ -17,8 +17,7 @@
   width: 100%;
   max-width: calc(var(--messageWidth) * 1.25);
 }
-
-.contact {
+.izzyPhone .contact {
   background: var(--bg1);
   color: var(--text1);
   font-size: 1.2em;
@@ -30,8 +29,7 @@
   position: relative;
   top: -1px;
 }
-
-.messages {
+.izzyPhone .messages {
   padding-right: calc(var(--pad) / 2);
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -40,20 +38,19 @@
   margin-right: calc(var(--pad) / 2);
   max-height: 300px;
 }
-.messages::-webkit-scrollbar {
+.izzyPhone .messages::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-.messages::-webkit-scrollbar-thumb {
+.izzyPhone .messages::-webkit-scrollbar-thumb {
   background: var(--bg1);
   border-radius: var(--radius);
 }
-.messages::-webkit-scrollbar-track {
+.izzyPhone .messages::-webkit-scrollbar-track {
   background: var(--grayAlpha);
   border-radius: var(--radius);
 }
-
-.timestamp {
+.izzyPhone .timestamp {
   margin: calc(var(--gap) * 2);
   display: block;
   text-align: center;
@@ -62,11 +59,10 @@
   line-height: 2;
   opacity: 0.8;
 }
-.timestamp:first-of-type {
+.izzyPhone .timestamp:first-of-type {
   margin-top: 0;
 }
-
-.message {
+.izzyPhone .message {
   background-color: var(--bg);
   color: var(--text);
   display: block;
@@ -75,28 +71,24 @@
   margin: var(--gap) 0;
   padding: var(--radius);
 }
-
-.to {
+.izzyPhone .to {
   --bg: var(--bg1);
   --text: var(--text1);
   margin-left: auto;
   border-radius: var(--radius) 0 var(--radius) var(--radius);
 }
-
-.from {
+.izzyPhone .from {
   --bg: var(--bg2);
   --text: var(--text2);
   margin-right: auto;
   border-radius: 0 var(--radius) var(--radius) var(--radius);
 }
-
-.message img {
+.izzyPhone .message img {
   display: block;
   height: auto;
   max-width: 100%;
   border-radius: calc(var(--radius) * 0.5);
 }
-
-:not(.to) + .to, :not(.from) + .from {
+.izzyPhone :not(.to) + .to, .izzyPhone :not(.from) + .from {
   margin-top: calc(var(--gap) * 2);
 }
