@@ -67,6 +67,7 @@
   color: var(--text);
   display: block;
   box-sizing: border-box;
+  width: max-content;
   max-width: min(80%, var(--messageWidth));
   margin: var(--gap) 0;
   padding: var(--radius);
