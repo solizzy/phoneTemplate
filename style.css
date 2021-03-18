@@ -8,6 +8,7 @@
   --pad: calc(var(--gap) * 4);
   --messageWidth: 28ch;
   --radius: 10px;
+  --height: 460px;
   background-color: var(--grayAlpha);
   border-radius: calc(var(--radius) * 0.5);
   border: var(--bg1) 2px solid;
@@ -31,12 +32,12 @@
 }
 .izzyPhone .messages {
   padding-right: calc(var(--pad) / 2);
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--bg1) var(--grayAlpha);
   margin: var(--pad);
   margin-right: calc(var(--pad) / 2);
-  max-height: 300px;
+  max-height: calc(var(--height) - 86px);
 }
 .izzyPhone .messages::-webkit-scrollbar {
   width: 5px;
