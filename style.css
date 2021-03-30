@@ -1,17 +1,17 @@
 .izzyPhone {
-  --bg1: #54dbce;
-  --bg2: #bae2e1;
-  --text1: #111;
-  --text2: #111;
-  --grayAlpha: rgba(100, 100, 100, 0.3);
+  --bgTo: #54dbce;
+  --bgFrom: #bae2e1;
+  --textTo: #111;
+  --textFrom: #111;
+  --bgRGB: 134, 134, 134;
   --gap: 4px;
   --pad: calc(var(--gap) * 4);
   --messageWidth: 28ch;
   --radius: 10px;
   --height: 460px;
-  background-color: var(--grayAlpha);
+  background-color: rgba(var(--bgRGB),0.3);
   border-radius: calc(var(--radius) * 0.5);
-  border: var(--bg1) 2px solid;
+  border: var(--bgTo) 2px solid;
   font-family: sans-serif;
   position: relative;
   margin: auto;
@@ -19,8 +19,8 @@
   max-width: calc(var(--messageWidth) * 1.25);
 }
 .izzyPhone .contact {
-  background: var(--bg1);
-  color: var(--text1);
+  background: var(--bgTo);
+  color: var(--textTo);
   font-size: 1.2em;
   letter-spacing: 1px;
   box-sizing: border-box;
@@ -34,7 +34,7 @@
   padding-right: calc(var(--pad) / 2);
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--bg1) var(--grayAlpha);
+  scrollbar-color: var(--bgTo) rgba(var(--bgRGB),0.5);
   margin: var(--pad);
   margin-right: calc(var(--pad) / 2);
   max-height: calc(var(--height) - 86px);
@@ -44,14 +44,15 @@
   height: 5px;
 }
 .izzyPhone .messages::-webkit-scrollbar-thumb {
-  background: var(--bg1);
+  background: var(--bgTo);
   border-radius: var(--radius);
 }
 .izzyPhone .messages::-webkit-scrollbar-track {
-  background: var(--grayAlpha);
+  background: rgba(var(--bgRGB),0.5);
   border-radius: var(--radius);
 }
 .izzyPhone .timestamp {
+  color: rgba(var(--bgRGB),0.8);
   margin: calc(var(--gap) * 2);
   display: flex;
   align-items: center;
@@ -88,14 +89,14 @@
   width: max-content;
 }
 .izzyPhone .to {
-  --bg: var(--bg1);
-  --text: var(--text1);
+  --bg: var(--bgTo);
+  --text: var(--textTo);
   margin-left: auto;
   border-radius: var(--radius) 0 var(--radius) var(--radius);
 }
 .izzyPhone .from {
-  --bg: var(--bg2);
-  --text: var(--text2);
+  --bg: var(--bgFrom);
+  --text: var(--textFrom);
   margin-right: auto;
   border-radius: 0 var(--radius) var(--radius) var(--radius);
 }
