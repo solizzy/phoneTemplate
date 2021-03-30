@@ -1,15 +1,16 @@
 .izzyPhone {
   --bgTo: #54dbce;
   --bgFrom: #bae2e1;
+  --bgRGB: 134, 134, 134;
   --textTo: #111;
   --textFrom: #111;
-  --bgRGB: 134, 134, 134;
+  --textTimestamp: white;
   --gap: 4px;
   --pad: calc(var(--gap) * 4);
   --messageWidth: 28ch;
   --radius: 10px;
   --height: 460px;
-  background-color: rgba(var(--bgRGB),0.3);
+  background-color: rgba(var(--bgRGB),0.5);
   border-radius: calc(var(--radius) * 0.5);
   border: var(--bgTo) 2px solid;
   font-family: sans-serif;
@@ -52,7 +53,7 @@
   border-radius: var(--radius);
 }
 .izzyPhone .timestamp {
-  color: rgba(var(--bgRGB),0.8);
+  color: var(--textTimestamp);
   margin: calc(var(--gap) * 2);
   display: flex;
   align-items: center;
